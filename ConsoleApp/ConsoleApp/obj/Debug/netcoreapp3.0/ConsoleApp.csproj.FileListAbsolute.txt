@@ -1,0 +1,11 @@
+C:\Users\Bruger\Desktop\H1 Apps\ConsoleApp\ConsoleApp\bin\Debug\netcoreapp3.0\ConsoleApp.exe
+C:\Users\Bruger\Desktop\H1 Apps\ConsoleApp\ConsoleApp\bin\Debug\netcoreapp3.0\ConsoleApp.deps.json
+C:\Users\Bruger\Desktop\H1 Apps\ConsoleApp\ConsoleApp\bin\Debug\netcoreapp3.0\ConsoleApp.runtimeconfig.json
+C:\Users\Bruger\Desktop\H1 Apps\ConsoleApp\ConsoleApp\bin\Debug\netcoreapp3.0\ConsoleApp.runtimeconfig.dev.json
+C:\Users\Bruger\Desktop\H1 Apps\ConsoleApp\ConsoleApp\bin\Debug\netcoreapp3.0\ConsoleApp.dll
+C:\Users\Bruger\Desktop\H1 Apps\ConsoleApp\ConsoleApp\bin\Debug\netcoreapp3.0\ConsoleApp.pdb
+C:\Users\Bruger\Desktop\H1 Apps\ConsoleApp\ConsoleApp\obj\Debug\netcoreapp3.0\ConsoleApp.csprojAssemblyReference.cache
+C:\Users\Bruger\Desktop\H1 Apps\ConsoleApp\ConsoleApp\obj\Debug\netcoreapp3.0\ConsoleApp.AssemblyInfoInputs.cache
+C:\Users\Bruger\Desktop\H1 Apps\ConsoleApp\ConsoleApp\obj\Debug\netcoreapp3.0\ConsoleApp.AssemblyInfo.cs
+C:\Users\Bruger\Desktop\H1 Apps\ConsoleApp\ConsoleApp\obj\Debug\netcoreapp3.0\ConsoleApp.dll
+C:\Users\Bruger\Desktop\H1 Apps\ConsoleApp\ConsoleApp\obj\Debug\netcoreapp3.0\ConsoleApp.pdb

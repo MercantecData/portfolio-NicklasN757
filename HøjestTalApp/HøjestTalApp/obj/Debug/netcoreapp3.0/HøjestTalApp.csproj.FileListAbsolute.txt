@@ -1,0 +1,11 @@
+C:\Users\Bruger\Desktop\H1 Apps\HøjestTalApp\HøjestTalApp\bin\Debug\netcoreapp3.0\HøjestTalApp.exe
+C:\Users\Bruger\Desktop\H1 Apps\HøjestTalApp\HøjestTalApp\bin\Debug\netcoreapp3.0\HøjestTalApp.deps.json
+C:\Users\Bruger\Desktop\H1 Apps\HøjestTalApp\HøjestTalApp\bin\Debug\netcoreapp3.0\HøjestTalApp.runtimeconfig.json
+C:\Users\Bruger\Desktop\H1 Apps\HøjestTalApp\HøjestTalApp\bin\Debug\netcoreapp3.0\HøjestTalApp.runtimeconfig.dev.json
+C:\Users\Bruger\Desktop\H1 Apps\HøjestTalApp\HøjestTalApp\bin\Debug\netcoreapp3.0\HøjestTalApp.dll
+C:\Users\Bruger\Desktop\H1 Apps\HøjestTalApp\HøjestTalApp\bin\Debug\netcoreapp3.0\HøjestTalApp.pdb
+C:\Users\Bruger\Desktop\H1 Apps\HøjestTalApp\HøjestTalApp\obj\Debug\netcoreapp3.0\HøjestTalApp.csprojAssemblyReference.cache
+C:\Users\Bruger\Desktop\H1 Apps\HøjestTalApp\HøjestTalApp\obj\Debug\netcoreapp3.0\HøjestTalApp.AssemblyInfoInputs.cache
+C:\Users\Bruger\Desktop\H1 Apps\HøjestTalApp\HøjestTalApp\obj\Debug\netcoreapp3.0\HøjestTalApp.AssemblyInfo.cs
+C:\Users\Bruger\Desktop\H1 Apps\HøjestTalApp\HøjestTalApp\obj\Debug\netcoreapp3.0\HøjestTalApp.dll
+C:\Users\Bruger\Desktop\H1 Apps\HøjestTalApp\HøjestTalApp\obj\Debug\netcoreapp3.0\HøjestTalApp.pdb

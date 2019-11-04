@@ -1,0 +1,22 @@
+C:\Users\Bruger\source\repos\ArrayApp\ArrayApp\bin\Debug\netcoreapp3.0\ArrayApp.exe
+C:\Users\Bruger\source\repos\ArrayApp\ArrayApp\bin\Debug\netcoreapp3.0\ArrayApp.deps.json
+C:\Users\Bruger\source\repos\ArrayApp\ArrayApp\bin\Debug\netcoreapp3.0\ArrayApp.runtimeconfig.json
+C:\Users\Bruger\source\repos\ArrayApp\ArrayApp\bin\Debug\netcoreapp3.0\ArrayApp.runtimeconfig.dev.json
+C:\Users\Bruger\source\repos\ArrayApp\ArrayApp\bin\Debug\netcoreapp3.0\ArrayApp.dll
+C:\Users\Bruger\source\repos\ArrayApp\ArrayApp\bin\Debug\netcoreapp3.0\ArrayApp.pdb
+C:\Users\Bruger\source\repos\ArrayApp\ArrayApp\obj\Debug\netcoreapp3.0\ArrayApp.csprojAssemblyReference.cache
+C:\Users\Bruger\source\repos\ArrayApp\ArrayApp\obj\Debug\netcoreapp3.0\ArrayApp.AssemblyInfoInputs.cache
+C:\Users\Bruger\source\repos\ArrayApp\ArrayApp\obj\Debug\netcoreapp3.0\ArrayApp.AssemblyInfo.cs
+C:\Users\Bruger\source\repos\ArrayApp\ArrayApp\obj\Debug\netcoreapp3.0\ArrayApp.dll
+C:\Users\Bruger\source\repos\ArrayApp\ArrayApp\obj\Debug\netcoreapp3.0\ArrayApp.pdb
+C:\Users\Bruger\Desktop\H1 Apps\ArrayApp\ArrayApp\bin\Debug\netcoreapp3.0\ArrayApp.exe
+C:\Users\Bruger\Desktop\H1 Apps\ArrayApp\ArrayApp\bin\Debug\netcoreapp3.0\ArrayApp.deps.json
+C:\Users\Bruger\Desktop\H1 Apps\ArrayApp\ArrayApp\bin\Debug\netcoreapp3.0\ArrayApp.runtimeconfig.json
+C:\Users\Bruger\Desktop\H1 Apps\ArrayApp\ArrayApp\bin\Debug\netcoreapp3.0\ArrayApp.runtimeconfig.dev.json
+C:\Users\Bruger\Desktop\H1 Apps\ArrayApp\ArrayApp\bin\Debug\netcoreapp3.0\ArrayApp.dll
+C:\Users\Bruger\Desktop\H1 Apps\ArrayApp\ArrayApp\bin\Debug\netcoreapp3.0\ArrayApp.pdb
+C:\Users\Bruger\Desktop\H1 Apps\ArrayApp\ArrayApp\obj\Debug\netcoreapp3.0\ArrayApp.csprojAssemblyReference.cache
+C:\Users\Bruger\Desktop\H1 Apps\ArrayApp\ArrayApp\obj\Debug\netcoreapp3.0\ArrayApp.AssemblyInfoInputs.cache
+C:\Users\Bruger\Desktop\H1 Apps\ArrayApp\ArrayApp\obj\Debug\netcoreapp3.0\ArrayApp.AssemblyInfo.cs
+C:\Users\Bruger\Desktop\H1 Apps\ArrayApp\ArrayApp\obj\Debug\netcoreapp3.0\ArrayApp.dll
+C:\Users\Bruger\Desktop\H1 Apps\ArrayApp\ArrayApp\obj\Debug\netcoreapp3.0\ArrayApp.pdb

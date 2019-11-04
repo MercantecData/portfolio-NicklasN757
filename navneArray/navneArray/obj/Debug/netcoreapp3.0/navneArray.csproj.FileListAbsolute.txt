@@ -1,0 +1,10 @@
+C:\Users\Bruger\Desktop\H1 Apps\navneArray\navneArray\bin\Debug\netcoreapp3.0\navneArray.exe
+C:\Users\Bruger\Desktop\H1 Apps\navneArray\navneArray\bin\Debug\netcoreapp3.0\navneArray.deps.json
+C:\Users\Bruger\Desktop\H1 Apps\navneArray\navneArray\bin\Debug\netcoreapp3.0\navneArray.runtimeconfig.json
+C:\Users\Bruger\Desktop\H1 Apps\navneArray\navneArray\bin\Debug\netcoreapp3.0\navneArray.runtimeconfig.dev.json
+C:\Users\Bruger\Desktop\H1 Apps\navneArray\navneArray\bin\Debug\netcoreapp3.0\navneArray.dll
+C:\Users\Bruger\Desktop\H1 Apps\navneArray\navneArray\bin\Debug\netcoreapp3.0\navneArray.pdb
+C:\Users\Bruger\Desktop\H1 Apps\navneArray\navneArray\obj\Debug\netcoreapp3.0\navneArray.AssemblyInfoInputs.cache
+C:\Users\Bruger\Desktop\H1 Apps\navneArray\navneArray\obj\Debug\netcoreapp3.0\navneArray.AssemblyInfo.cs
+C:\Users\Bruger\Desktop\H1 Apps\navneArray\navneArray\obj\Debug\netcoreapp3.0\navneArray.dll
+C:\Users\Bruger\Desktop\H1 Apps\navneArray\navneArray\obj\Debug\netcoreapp3.0\navneArray.pdb
