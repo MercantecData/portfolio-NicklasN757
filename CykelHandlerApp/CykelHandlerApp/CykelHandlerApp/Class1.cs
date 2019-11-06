@@ -13,6 +13,18 @@ namespace CykelHandlerApp
     {
         public string name;
         public List<Bike> bikes;
+
+        public string[] getBrand(List<Bike> bikes)
+        {
+            string[] str = new string[bikes.Count];
+            int i = 0;
+            while(i > bikes.Count)
+            {
+                str[i] = bikes[i].brands;
+                i++;
+            }
+            return str;
+        }
     }
     class Bike
     {

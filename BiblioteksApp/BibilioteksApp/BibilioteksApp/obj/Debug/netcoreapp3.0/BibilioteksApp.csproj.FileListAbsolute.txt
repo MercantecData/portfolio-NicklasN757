@@ -9,3 +9,14 @@ C:\Users\Bruger\Desktop\H1 Repo\portfolio-NicklasN757\BiblioteksApp\BibilioteksA
 C:\Users\Bruger\Desktop\H1 Repo\portfolio-NicklasN757\BiblioteksApp\BibilioteksApp\BibilioteksApp\bin\Debug\netcoreapp3.0\BibilioteksApp.pdb
 C:\Users\Bruger\Desktop\H1 Repo\portfolio-NicklasN757\BiblioteksApp\BibilioteksApp\BibilioteksApp\obj\Debug\netcoreapp3.0\BibilioteksApp.dll
 C:\Users\Bruger\Desktop\H1 Repo\portfolio-NicklasN757\BiblioteksApp\BibilioteksApp\BibilioteksApp\obj\Debug\netcoreapp3.0\BibilioteksApp.pdb
+C:\Users\Bruger\Desktop\portfolio-NicklasN757\BiblioteksApp\BibilioteksApp\BibilioteksApp\obj\Debug\netcoreapp3.0\BibilioteksApp.csprojAssemblyReference.cache
+C:\Users\Bruger\Desktop\portfolio-NicklasN757\BiblioteksApp\BibilioteksApp\BibilioteksApp\obj\Debug\netcoreapp3.0\BibilioteksApp.AssemblyInfoInputs.cache
+C:\Users\Bruger\Desktop\portfolio-NicklasN757\BiblioteksApp\BibilioteksApp\BibilioteksApp\obj\Debug\netcoreapp3.0\BibilioteksApp.AssemblyInfo.cs
+C:\Users\Bruger\Desktop\portfolio-NicklasN757\BiblioteksApp\BibilioteksApp\BibilioteksApp\obj\Debug\netcoreapp3.0\BibilioteksApp.dll
+C:\Users\Bruger\Desktop\portfolio-NicklasN757\BiblioteksApp\BibilioteksApp\BibilioteksApp\obj\Debug\netcoreapp3.0\BibilioteksApp.pdb
+C:\Users\Bruger\Desktop\portfolio-NicklasN757\BiblioteksApp\BibilioteksApp\BibilioteksApp\bin\Debug\netcoreapp3.0\BibilioteksApp.exe
+C:\Users\Bruger\Desktop\portfolio-NicklasN757\BiblioteksApp\BibilioteksApp\BibilioteksApp\bin\Debug\netcoreapp3.0\BibilioteksApp.deps.json
+C:\Users\Bruger\Desktop\portfolio-NicklasN757\BiblioteksApp\BibilioteksApp\BibilioteksApp\bin\Debug\netcoreapp3.0\BibilioteksApp.runtimeconfig.json
+C:\Users\Bruger\Desktop\portfolio-NicklasN757\BiblioteksApp\BibilioteksApp\BibilioteksApp\bin\Debug\netcoreapp3.0\BibilioteksApp.runtimeconfig.dev.json
+C:\Users\Bruger\Desktop\portfolio-NicklasN757\BiblioteksApp\BibilioteksApp\BibilioteksApp\bin\Debug\netcoreapp3.0\BibilioteksApp.dll
+C:\Users\Bruger\Desktop\portfolio-NicklasN757\BiblioteksApp\BibilioteksApp\BibilioteksApp\bin\Debug\netcoreapp3.0\BibilioteksApp.pdb

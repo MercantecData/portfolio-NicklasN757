@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Bruger\\Desktop\\H1 Repo\\portfolio-NicklasN757\\BiblioteksApp\\BibilioteksApp\\BibilioteksApp\\BibilioteksApp.csproj",
+      "projectUniqueName": "C:\\Users\\Bruger\\Desktop\\portfolio-NicklasN757\\BiblioteksApp\\BibilioteksApp\\BibilioteksApp\\BibilioteksApp.csproj",
       "projectName": "BibilioteksApp",
-      "projectPath": "C:\\Users\\Bruger\\Desktop\\H1 Repo\\portfolio-NicklasN757\\BiblioteksApp\\BibilioteksApp\\BibilioteksApp\\BibilioteksApp.csproj",
+      "projectPath": "C:\\Users\\Bruger\\Desktop\\portfolio-NicklasN757\\BiblioteksApp\\BibilioteksApp\\BibilioteksApp\\BibilioteksApp.csproj",
       "packagesPath": "C:\\Users\\Bruger\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Bruger\\Desktop\\H1 Repo\\portfolio-NicklasN757\\BiblioteksApp\\BibilioteksApp\\BibilioteksApp\\obj\\",
+      "outputPath": "C:\\Users\\Bruger\\Desktop\\portfolio-NicklasN757\\BiblioteksApp\\BibilioteksApp\\BibilioteksApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
