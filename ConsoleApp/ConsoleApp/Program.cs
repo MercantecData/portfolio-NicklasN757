@@ -26,7 +26,7 @@ namespace ConsoleApp
             {
                 if (guessNum < playerNum)
                 {
-                    if (guessNum > 999999)
+                    /*if (guessNum > 999999)
                     {
                         minRange *= 1.5;
                         while (minRange > playerNum)
@@ -43,13 +43,13 @@ namespace ConsoleApp
                         }
                     }
                     else
-                    {
+                    {*/
                         minRange *= 2;
                         while (minRange > playerNum)
                         {
                             minRange /= 1.05;
                         }
-                    }
+                    //}
                 }
                 return minRange;
             }
@@ -58,7 +58,7 @@ namespace ConsoleApp
             {
                 if (guessNum > playerNum)
                 {
-                    if (guessNum > 999999)
+                    /*if (guessNum > 999999)
                     {
                         maxRange /= 1.5;
                         while (maxRange > playerNum)
@@ -75,13 +75,13 @@ namespace ConsoleApp
                         }
                     }
                     else
-                    {
+                    {*/
                         maxRange /= 2;
                         while (maxRange < playerNum)
                         {
                             maxRange *= 1.05;
                         }
-                    }
+                    //}
                 }
                 return maxRange;
             }

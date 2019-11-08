@@ -23,5 +23,11 @@ namespace BibilioteksApp
             books.RemoveAt(bookNum);
             return books;
         }
+
+        public Customer loanBook(Book book, Customer customer)
+        {
+            customer.loanBooks.Add(book);
+            return customer;
+        }
     }
 }

@@ -25,6 +25,10 @@ namespace BibilioteksApp
             Console.WriteLine();
 
             printEmployer(library);
+
+            Console.WriteLine();
+            library.loanBook(library.books[0], library.customer[0]);
+            Console.WriteLine(library.customer[0].loanBooks[0].name);
             
         }
 

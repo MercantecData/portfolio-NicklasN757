@@ -9,6 +9,7 @@ namespace BibilioteksApp
         public string name;
         public int age;
         public int customerID;
+        public List<Book> loanBooks = new List<Book>();
 
         public Customer(string name, int age, int customerID)
         {
