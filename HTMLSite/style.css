@@ -1,6 +1,12 @@
 .backgrundColor{
     background-color: blue;
+    color: white;
 }
 .billede{
-    border: solid black 5px
+    border: solid black 5px;
+}
+.headerText{
+    background-color: white;
+    border: solid black 5px;
+    color: black;
 }
