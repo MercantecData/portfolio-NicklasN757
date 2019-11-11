@@ -1,1 +1,3 @@
-function
+function onClick(){
+    document.getElementById('time').innerHTML=Date()
+}
