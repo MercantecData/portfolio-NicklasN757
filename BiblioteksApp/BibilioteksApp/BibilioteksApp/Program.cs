@@ -57,7 +57,7 @@ namespace BibilioteksApp
         }
         public static void printBooks(Library library)
         {
-            Console.WriteLine("Vores udvalg af bøger består af:");
+            Console.WriteLine("Her er en liste over vores udvalg af bøger:");
             Console.WriteLine("<>------------------------------------<>");
 
             int i = 0;
