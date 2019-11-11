@@ -1,5 +1,6 @@
 .backgrundColor{
-    background-color: blue;
+    background-image: linear-gradient(to bottom, blue, white);
+    height: 1100px;
     color: white;
 }
 .billede{
