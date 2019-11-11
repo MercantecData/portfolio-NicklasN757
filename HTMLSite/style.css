@@ -4,9 +4,21 @@
 }
 .billede{
     border: solid black 5px;
+    margin: 30px;
 }
 .headerText{
     background-color: white;
     border: solid black 5px;
+    border-radius: 100px;
     color: black;
+    text-align: center;
+    width: 97%;
+}
+.textBox{
+    color: black;
+    background-color: white;
+    border: 5px solid black;
+    width: 650px;
+    height: auto;
+    border-radius: 20px;
 }
