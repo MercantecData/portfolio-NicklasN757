@@ -24,10 +24,10 @@ namespace BibilioteksApp
             return books;
         }
 
-        public Customer loanBook(Book book, Customer customer)
+        public void loanBook(Book book, Customer customer)
         {
             customer.loanBooks.Add(book);
-            return customer;
+            books.Remove(book);
         }
     }
 }

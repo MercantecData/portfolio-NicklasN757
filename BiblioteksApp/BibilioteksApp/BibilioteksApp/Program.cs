@@ -28,7 +28,11 @@ namespace BibilioteksApp
 
             Console.WriteLine();
             library.loanBook(library.books[0], library.customer[0]);
-            Console.WriteLine(library.customer[0].loanBooks[0].name);
+            Console.WriteLine("Du har valgt at låne bogen: " + library.customer[0].loanBooks[0].name);
+
+            Console.WriteLine();
+
+            printBooks(library);
             
         }
 
