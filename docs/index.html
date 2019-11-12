@@ -2,13 +2,14 @@
 <head>
     <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="scripts.js"></script>
+    <meta charset="UTF-8">
     <title>Min side</title>
 </head>
 <body class="backgrundColor">
 <center>
     <h1 class="headerText">Hej og velkommen til min side!</h1>
-    <h2 class="headerText">Her er lidt om mig.....</h2>
-        <div class="textBox">
+    <h2 class="headerText">Her er lidt om mig..... <button style="margin: 5px;" onclick="hideText('myDIV1')">Min eller Max</button></h2> 
+        <div class="textBox" id="myDIV1">
             <img class="billede" src="profilePic.jpg">
             <p>
                 Hej mit navn er Nicklas Markvart Nielsen. Jeg er 19 år og er en rolig, <br> ansvarsfuld og stabil ung mand. Jeg bor i Bjerringbro hvor jeg både er vokset op <br> og gået i folkeskole. Jeg er meget fleksibel og yder gerne en ekstra indsats, <br>
@@ -16,15 +17,50 @@
                 når jeg bliver nødt til at dykke ned i opgaven for at få det til at virke. <br>
                 Jeg arbejder gerne selvstændigt, men jeg ved også, at det er i samarbejde med <br> mine kollegaer, at jeg lærer mest og yder den bedste service.
             </p>
-            <button style="margin: 15px;" id="time" onclick="onClick()">Hvad er klokken?</button>
+            <button style="margin: 15px;" id="time" onclick="time()">Hvad er klokken?</button>
         </div>
-    <h2 class="headerText">Her er en list over relevante hjemmesider.</h2>
-    <div class="textBox">
-        <ul>
-            <li><a href="https://www.facebook.com/nicklas.markvartnielsen">Min Facebook.</a></li>
-            <li><a href="https://www.linkedin.com/in/nicklas-markvart-nielsen-a5020b182/">Min LinkedIn.</a></li>
-            <li><a href="https://www.youtube.com/watch?v=m_aqJigYL2Y&t">Musik jeg hørte imens jeg skrev det her.</a></li>
-        </ul>
+    <h2 class="headerText">Her er en liste over mine it kompetencer. <button style="margin: 5px;" onclick="hideText('myDIV2')">Min eller Max</button></h2>
+    <div class="textBox" style="text-align: left;" id="myDIV2">
+        <h3 style="margin: 10px">Programmer</h3>
+            <ul><b>
+                <li>Office 365</li>
+                <li>VMWare</li>
+                <li>Microsoft Visual Studio</li>
+                <li>X-Code</li>
+                <li>Arduino IDE</li>
+                <li>Android Studio</li>
+                <li>GitKraken</li>
+            </b></ul>
+        <h3 style="margin: 10px">Styresystemer</h3>
+            <ul><b>
+                <li>Windows</li>
+                <li>MAC OS</li>
+                <li>Linux (Begynder)</li>
+            </b></ul>
+        <h3 style="margin: 10px">Programmeringssprog</h3>
+            <ul><b>
+                <li>Swift (Øvet)</li>
+                <li>PHP (Begynder)</li>
+                <li>Java (Begynder)</li>
+                <li>Javascript (Begynder)</li>
+                <li>HTML (Øvet)</li>
+                <li>CSS (Øvet)</li>
+                <li>Python (Nybegynder)</li>
+                <li>C# (Øvet)</li>
+                <li>React-Native (Nybegynder)</li>
+        </b></ul>
+    </div>
+    <h2 class="headerText">Playgrund.... <button style="margin: 5px;" onclick="hideText('myDIV3')">Min eller Max</button></h2>
+    <div class="textBox" id="myDIV3">
+        <h3>Tilføj et "p" tag!</h3>
+        <div class="textBoxInBox" id="addRemove"></div>
+        <p><button onclick="addText('addRemove')">Tilføj</button><!--<button onclick="removeText('')">Fjern</button>--></p>
+        <h3>Skal vi tælle hvor mange får der er i mit array?</h3>
+        <div class="textBoxInBox" id="arrayPrint"></div>
+        <button style="margin: 10px;" onclick="arrayPrint('arrayPrint')">Tæl</button>
+        <h3>Prøv min hjemmelavet knap!</h3>
+        <div class="button" onclick="knapTest('homeMadeButton')">Tryk her!</div>
+        <p id="homeMadeButton"></p>
     </div>
 </center>
 </body>
