@@ -44,3 +44,44 @@
 .button:active{
     background-color: darkgray;
 }
+.myGrid{
+    height: 90vh;
+    width: 90%;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-areas: "header header header"
+                         "left main right"
+                         "footer footer footer";
+    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+  .box {
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    padding: 1rem;
+  }
+  .box_1 {
+    background: deepskyblue;
+    grid-area: header;
+  }
+  .box_2 {
+    background: red;
+    grid-area: left;
+  }
+  .box_3 {
+    background: royalblue;
+    grid-area: main;
+  }
+  .box_4 {
+    background: gold;
+    grid-area: right;
+  }
+  .box_5 {
+    background: blueviolet;
+    grid-area: footer;
+  }
+  .miniSiteAd{
+    height: 300px; 
+    width: 130px;
+  }
