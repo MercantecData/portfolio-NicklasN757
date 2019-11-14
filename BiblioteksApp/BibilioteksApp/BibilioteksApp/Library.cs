@@ -12,27 +12,24 @@ namespace BibilioteksApp
         private List<Book> books = new List<Book>();
         private List<Customer> customers = new List<Customer>();
 
-        public Library nameAdd(Library library, string name)
+        public void nameAdd(string newName)
         {
-            library.name = name;
-            return library;
+            name = newName;
         }
-        public Library ownerAdd(Library library, string name)
+        public void ownerAdd(string name)
         {
-            library.owner = name;
-            return library;
-        }
-        //Book functions
-        public Library addBook(Library library, Book book)
-        {
-            library.books.Add(book);
-            return library;
+            owner = name;
         }
 
-        public Library removeBook(Library library, Book book)
+        //Book functions
+        public void addBook(Book book)
         {
-            library.books.Remove(book);
-            return library;
+            books.Add(book);
+        }
+
+        public void removeBook(Book book)
+        {
+            books.Remove(book);
         }
 
         public void loanBook(Customer customer, Book book)
@@ -43,63 +40,47 @@ namespace BibilioteksApp
         //-----------------------------------------------------//
 
         //Customer functions
-        public Library addCustomer(Library library, Customer customer)
+        public void addCustomer(Customer customer)
         {
-            library.customers.Add(customer);
-            return library;
+            customers.Add(customer);
         }
-        public Library removeCustomer(Library library, Customer customer)
+        public void removeCustomer(Customer customer)
         {
-            library.customers.Remove(customer);
-            return library;
+            customers.Remove(customer);
         }
         //-------------------------------------------------------//
 
         //Employer functions
-        public Library addEmployer(Library library, Employer employer)
+        public void addEmployer(Employer employer)
         {
-            library.employers.Add(employer);
-            return library;
+            employers.Add(employer);
         }
-        public Library removeEmployer(Library library, Employer employer)
+        public void removeEmployer(Employer employer)
         {
-            library.employers.Remove(employer);
-            return library;
+            employers.Remove(employer);
         }
         //--------------------------------------------------------//
 
         //Get functions 
-        public string getName(Library library)
+        public string getName()
         {
-            return library.name;
+            return name;
         }
-        public string getOwner(Library library)
+        public string getOwner()
         {
-            return library.owner;
+            return owner;
         }
-        public List<Customer> getCustomerList(Library library)
+        public List<Customer> getCustomerList()
         {
-            return library.customers;
+            return customers;
         }
-        public Customer getCustomer(List<Customer> customerList, int customerNum)
+        public List<Employer> getEmployerList()
         {
-            return customerList[customerNum];
+            return employers;
         }
-        public List<Employer> getEmployerList(Library library)
+        public List<Book> getBookList()
         {
-            return library.employers;
-        }
-        public Employer getEmployer(List<Employer> employerList, int employerNum)
-        {
-            return employerList[employerNum];
-        }
-        public List<Book> getBookList(Library library)
-        {
-            return library.books;
-        }
-        public Book getBook(List<Book> bookList, int bookNum)
-        {
-            return bookList[bookNum];
+            return books;
         }
         //----------------------------------------------------//
     }
