@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Vært: 127.0.0.1
--- Genereringstid: 27. 11 2019 kl. 11:01:56
+-- Genereringstid: 28. 11 2019 kl. 10:57:31
 -- Serverversion: 10.3.16-MariaDB
 -- PHP-version: 7.3.7
 
@@ -21,6 +21,18 @@ SET time_zone = "+00:00";
 --
 -- Database: `testdb`
 --
+
+DELIMITER $$
+--
+-- Procedurer
+--
+CREATE DEFINER=`root`@`localhost` PROCEDURE `delete_order` (IN `orderID` INT(11))  BEGIN
+
+DELETE FROM orders WHERE Order_ID=orderID;
+
+END$$
+
+DELIMITER ;
 
 -- --------------------------------------------------------
 
@@ -56,6 +68,23 @@ INSERT INTO `addresses` (`ADDR_ID`, `User_ID`, `Address`, `City`, `Zip_Code`, `C
 -- --------------------------------------------------------
 
 --
+-- Stand-in-struktur for visning `name_and_addresses`
+-- (Se nedenfor for det aktuelle view)
+--
+CREATE TABLE `name_and_addresses` (
+`ID` int(11)
+,`Username` varchar(256)
+,`First_Name` varchar(256)
+,`Last_Name` varchar(256)
+,`Address` varchar(256)
+,`City` varchar(256)
+,`Zip_Code` int(11)
+,`Country` varchar(256)
+);
+
+-- --------------------------------------------------------
+
+--
 -- Struktur-dump for tabellen `orders`
 --
 
@@ -65,6 +94,16 @@ CREATE TABLE `orders` (
   `User_ID` int(11) NOT NULL,
   `ADDR_ID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Data dump for tabellen `orders`
+--
+
+INSERT INTO `orders` (`Order_ID`, `Prod_ID`, `User_ID`, `ADDR_ID`) VALUES
+(2, 4, 9, 4),
+(3, 10, 1, 4),
+(4, 9, 7, 10),
+(5, 5, 5, 8);
 
 -- --------------------------------------------------------
 
@@ -99,6 +138,29 @@ INSERT INTO `products` (`Prod_ID`, `Prod_Name`, `Prod_Description`, `Prod_Stock`
 -- --------------------------------------------------------
 
 --
+-- Stand-in-struktur for visning `products_view`
+-- (Se nedenfor for det aktuelle view)
+--
+CREATE TABLE `products_view` (
+`Prod_Name` varchar(256)
+,`Prod_Stock` int(11)
+,`Prod_Prize` double(11,2)
+);
+
+-- --------------------------------------------------------
+
+--
+-- Stand-in-struktur for visning `testview`
+-- (Se nedenfor for det aktuelle view)
+--
+CREATE TABLE `testview` (
+`ID` int(11)
+,`Username` varchar(256)
+);
+
+-- --------------------------------------------------------
+
+--
 -- Struktur-dump for tabellen `users`
 --
 
@@ -125,6 +187,33 @@ INSERT INTO `users` (`ID`, `Username`, `EMail`, `First_Name`, `Last_Name`) VALUE
 (8, 'Person7', 'mail@mail.com', 'First Name', 'Second Name'),
 (9, 'Person8', 'mail@mail.com', 'First Name', 'Second Name'),
 (10, 'Person9', 'mail@mail.com', 'First Name', 'Second Name');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur for visning `name_and_addresses`
+--
+DROP TABLE IF EXISTS `name_and_addresses`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `name_and_addresses`  AS  select `users`.`ID` AS `ID`,`users`.`Username` AS `Username`,`users`.`First_Name` AS `First_Name`,`users`.`Last_Name` AS `Last_Name`,`addresses`.`Address` AS `Address`,`addresses`.`City` AS `City`,`addresses`.`Zip_Code` AS `Zip_Code`,`addresses`.`Country` AS `Country` from (`users` join `addresses` on(`addresses`.`User_ID` = `users`.`ID`)) ;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur for visning `products_view`
+--
+DROP TABLE IF EXISTS `products_view`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `products_view`  AS  select `products`.`Prod_Name` AS `Prod_Name`,`products`.`Prod_Stock` AS `Prod_Stock`,`products`.`Prod_Prize` AS `Prod_Prize` from `products` ;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur for visning `testview`
+--
+DROP TABLE IF EXISTS `testview`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `testview`  AS  select `users`.`ID` AS `ID`,`users`.`Username` AS `Username` from `users` ;
 
 --
 -- Begrænsninger for dumpede tabeller
@@ -172,7 +261,7 @@ ALTER TABLE `addresses`
 -- Tilføj AUTO_INCREMENT i tabel `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `Order_ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Order_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Tilføj AUTO_INCREMENT i tabel `products`
