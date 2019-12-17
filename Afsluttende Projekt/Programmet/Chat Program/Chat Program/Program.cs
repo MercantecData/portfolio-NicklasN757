@@ -44,6 +44,7 @@ namespace Chat_Program
 
                     message = "Du er ved at oprette en server.";
                     go = confirmPromt(message);
+                    Server server = new Server();
 
                     Console.Clear();
 
