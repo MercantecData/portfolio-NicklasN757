@@ -6,75 +6,73 @@ using System.Net.Sockets;
 
 namespace Chat_Program
 {
-    class Server
+    class ClientProgram
     {
-        public List<TcpClient> clients = new List<TcpClient>();
-        public Server()
+        public ClientProgram()
         {
             consoleColor consoleColor = new consoleColor();
+            TcpClient client = new TcpClient();
+            bool isRunning = true;
 
             Console.Clear();
 
-            IPAddress ip = IPAddress.Any;
-            int port = portCheckServer();
+            int port = portCheckClient();
+            IPAddress ip = IPAddress.Parse("127.0.0.1");
+            IPEndPoint endPoint = new IPEndPoint(ip, port);
 
-            TcpListener listener = new TcpListener(ip, port);
-            listener.Start();
+            Console.Clear();
 
-            Console.WriteLine("Opretter server vent venligst...");
+            Console.WriteLine("Forbinder til server...");
+            client.Connect(endPoint);
+
             Console.Clear();
             consoleColor.green();
-            Console.WriteLine("Server oprettet på port: " + port);
+            Console.WriteLine("Forbinelse oprettet til server.");
+            Console.WriteLine("Port: " + port);
+            Console.WriteLine("Ip: " + ip);
             consoleColor.gray();
-            Console.WriteLine("Skriv den første besked.....");
+            Console.WriteLine("Skriv din første besked.....");
             Console.WriteLine("<--------------->-|-|-<--------------->");
 
-            AcceptClients(listener);
-
-            bool isRunning = true;
+            bool firstTimeRun = true;
             while (isRunning)
             {
+                NetworkStream stream = client.GetStream();
+                ReceiveMessage(stream);
 
                 Console.Write("You: ");
-                string text = Console.ReadLine();
-                byte[] buffer = Encoding.UTF8.GetBytes(text);
-                foreach (TcpClient client in clients)
+                if (firstTimeRun != true)
                 {
-                    client.GetStream().Write(buffer, 0, buffer.Length);
+                    ClearLastLine();
                 }
+                string text = Console.ReadLine();
+                firstTimeRun = false;
+                byte[] buffer = Encoding.UTF8.GetBytes(text);
+
+                stream.Write(buffer, 0, buffer.Length);
             }
+            
+            client.Close();
         }
-        public async void AcceptClients(TcpListener listener)
-        {
-            bool isRuning = true;
-            while (isRuning)
-            {
-                TcpClient client = await listener.AcceptTcpClientAsync();
-                clients.Add(client);
-                NetworkStream stream = client.GetStream();
-                ReceiveMessages(stream);
-            }
-        }
-        public async void ReceiveMessages(NetworkStream stream)
+        public async void ReceiveMessage(NetworkStream stream)
         {
             byte[] buffer = new byte[256];
-            bool isRunning = true;
-            while (isRunning)
-            {
-                int read = await stream.ReadAsync(buffer, 0, buffer.Length);
-                String text = Encoding.UTF8.GetString(buffer, 0, read);
-                Console.WriteLine("\nClient: " + text);
-                Console.Write("You: ");
-            }
+
+            int numberOfBytesRead = await stream.ReadAsync(buffer, 0, 256);
+            string receivedMessage = Encoding.UTF8.GetString(buffer, 0, numberOfBytesRead);
+
+            ClearLastLine();
+            Console.WriteLine("User: " + receivedMessage);
+            //Console.Write("\nYou: ");
         }
         //Tjekker om du har skrevet en gyldig port ind.
-        private int portCheckServer()
+        private int portCheckClient()
         {
             consoleColor consoleColor = new consoleColor();
             bool isRunning = true;
-            while (isRunning) 
-            { 
-                Console.WriteLine("Skriv hvad for en port din server skal være på.");
+            while (isRunning)
+            {
+                Console.WriteLine("Skriv hvad for en port du vil bruge.");
                 Console.WriteLine("Det skal være en port mellem 49151 og 65535.");
                 Console.Write("Dit valg: ");
                 string port = Console.ReadLine();
@@ -112,6 +110,12 @@ namespace Chat_Program
                 }
             }
             return 65535;
+        }
+        public static void ClearLastLine()
+        {
+            Console.SetCursorPosition(0, Console.CursorTop - 1);
+            Console.WriteLine(new string(' ', Console.WindowWidth));
+            Console.SetCursorPosition(0, Console.CursorTop - 1);
         }
     }
 }

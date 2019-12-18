@@ -35,7 +35,7 @@ namespace Chat_Program
 
                     if (go)
                     {
-                        Console.WriteLine("It Works");
+                        ClientProgram clientProgram = new ClientProgram();
                     }
                 }
                 else if (reply == "2")
@@ -44,13 +44,12 @@ namespace Chat_Program
 
                     message = "Du er ved at oprette en server.";
                     go = confirmPromt(message);
-                    Server server = new Server();
 
                     Console.Clear();
 
                     if (go)
                     {
-                        Console.WriteLine("It works");
+                        Server server = new Server();
                     }
                 }
                 else
