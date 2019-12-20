@@ -40,7 +40,18 @@ namespace Chat_Program
                 byte[] buffer = Encoding.UTF8.GetBytes(text);
                 foreach (TcpClient client in clients)
                 {
-                    client.GetStream().Write(buffer, 0, buffer.Length);
+                    try
+                    {
+                        client.GetStream().Write(buffer, 0, buffer.Length);
+                    }
+                    catch (System.IO.IOException)
+                    {
+                        break;
+                    }
+                    catch (System.InvalidOperationException)
+                    {
+                        break;
+                    }
                 }
             }
         }
@@ -57,14 +68,22 @@ namespace Chat_Program
         }
         public async void ReceiveMessages(NetworkStream stream)
         {
+            consoleColor consoleColor = new consoleColor();
             byte[] buffer = new byte[256];
             bool isRunning = true;
             while (isRunning)
             {
                 int read = await stream.ReadAsync(buffer, 0, buffer.Length);
                 String text = Encoding.UTF8.GetString(buffer, 0, read);
-                Console.WriteLine("\nClient: " + text);
-                Console.Write("You: ");
+                if (text == "/ouit")
+                {
+                    consoleColor.red();
+                    Console.WriteLine("\nA client has left the chat!");
+                    consoleColor.gray();
+                    isRunning = false;
+                    return;
+                }
+                Console.Write("\nClient: " + text);
             }
         }
         //Tjekker om du har skrevet en gyldig port ind.

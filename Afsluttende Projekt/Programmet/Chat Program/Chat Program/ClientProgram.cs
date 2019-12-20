@@ -14,17 +14,32 @@ namespace Chat_Program
             TcpClient client = new TcpClient();
             bool isRunning = true;
 
-            Console.Clear();
+            //Console.Clear();
 
             int port = portCheckClient();
-            IPAddress ip = IPAddress.Parse("127.0.0.1");
+            Console.Clear();
+            IPAddress ip = ipCheckClient();
             IPEndPoint endPoint = new IPEndPoint(ip, port);
 
             Console.Clear();
 
             Console.WriteLine("Forbinder til server...");
-            client.Connect(endPoint);
-
+            try
+            {
+                client.Connect(endPoint);
+            }
+            catch (SocketException)
+            {
+                Console.Clear();
+                consoleColor.red();
+                Console.WriteLine("Kunne ikke forbinde til serveren tjek om du har brugt den rigtige port og ip.");
+                consoleColor.gray();
+                Console.Write("Tryk ennter for at fortsætte...");
+                Console.ReadLine();
+                Console.Clear();
+                return;
+            }
+            
             Console.Clear();
             consoleColor.green();
             Console.WriteLine("Forbinelse oprettet til server.");
@@ -34,22 +49,28 @@ namespace Chat_Program
             Console.WriteLine("Skriv din første besked.....");
             Console.WriteLine("<--------------->-|-|-<--------------->");
 
-            bool firstTimeRun = true;
             while (isRunning)
             {
                 NetworkStream stream = client.GetStream();
                 ReceiveMessage(stream);
 
                 Console.Write("You: ");
-                if (firstTimeRun != true)
-                {
-                    ClearLastLine();
-                }
-                string text = Console.ReadLine();
-                firstTimeRun = false;
-                byte[] buffer = Encoding.UTF8.GetBytes(text);
 
+                string text = Console.ReadLine();
+                byte[] buffer = Encoding.UTF8.GetBytes(text);
                 stream.Write(buffer, 0, buffer.Length);
+
+                if (text == "/ouit")
+                {
+                    isRunning = false;
+                    client.Close();
+                    Console.WriteLine("<--------------->-|-|-<--------------->");
+                    Console.WriteLine("Du har forladt samtalen...");
+                    Console.WriteLine("Tryk enter for at gå videre...");
+                    Console.ReadLine();
+                    Console.Clear();
+                    return;
+                }
             }
             
             client.Close();
@@ -57,13 +78,23 @@ namespace Chat_Program
         public async void ReceiveMessage(NetworkStream stream)
         {
             byte[] buffer = new byte[256];
-
-            int numberOfBytesRead = await stream.ReadAsync(buffer, 0, 256);
-            string receivedMessage = Encoding.UTF8.GetString(buffer, 0, numberOfBytesRead);
-
-            ClearLastLine();
-            Console.WriteLine("User: " + receivedMessage);
-            //Console.Write("\nYou: ");
+            while (true)
+            {
+                try
+                {
+                    int numberOfBytesRead = await stream.ReadAsync(buffer, 0, 256);
+                    string receivedMessage = Encoding.UTF8.GetString(buffer, 0, numberOfBytesRead);
+                    Console.Write("\nUser: " + receivedMessage);
+                }
+                catch (System.IO.IOException)
+                {
+                    return;
+                }
+                catch (System.ObjectDisposedException)
+                {
+                    return;
+                }
+            }
         }
         //Tjekker om du har skrevet en gyldig port ind.
         private int portCheckClient()
@@ -111,10 +142,44 @@ namespace Chat_Program
             }
             return 65535;
         }
-        public static void ClearLastLine()
+        private IPAddress ipCheckClient()
+        {
+            consoleColor consoleColor = new consoleColor();
+            bool isRunning = true;
+
+            while (isRunning)
+            {
+                Console.WriteLine("Skriv den ip du vil forbinde til.");
+                Console.Write("Dit valg: ");
+                string ip = Console.ReadLine();
+
+                if (ip == "test")
+                {
+                    return IPAddress.Parse("127.0.0.1");
+                }
+
+                IPAddress stringIp;
+                bool result = IPAddress.TryParse(ip, out stringIp);
+                if (result)
+                {
+                    isRunning = false;
+                    return stringIp;
+                }
+                else
+                {
+                    Console.Clear();
+                    consoleColor.red();
+                    Console.WriteLine("Ugyldig ip. Prøv igen...");
+                    consoleColor.gray();
+                }
+            }
+            return IPAddress.Parse("127.0.0.1");
+        }
+        //Ryder sidste linje
+        public void ClearLastLine()
         {
             Console.SetCursorPosition(0, Console.CursorTop - 1);
-            Console.WriteLine(new string(' ', Console.WindowWidth));
+            Console.WriteLine(new string(' ', Console.BufferWidth));
             Console.SetCursorPosition(0, Console.CursorTop - 1);
         }
     }
